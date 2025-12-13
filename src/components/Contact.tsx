@@ -1,10 +1,12 @@
-import { Mail, Phone, User, Briefcase } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 interface ContactPerson {
   name: string;
   position: string;
   phone: string;
   email: string;
+  imageUrl: string;
 }
 
 const contactPersons: ContactPerson[] = [
@@ -13,16 +15,28 @@ const contactPersons: ContactPerson[] = [
     position: "Position Title",
     phone: "+94 XX XXX XXXX",
     email: "email@aiesec.lk",
+    imageUrl:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&w=320&h=320&q=80",
   },
   {
     name: "Contact Person 2",
     position: "Position Title",
     phone: "+94 XX XXX XXXX",
     email: "email@aiesec.lk",
+    imageUrl:
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=facearea&w=320&h=320&q=80",
   },
 ];
 
 const Contact = () => {
+  const getInitials = (name: string) =>
+    name
+      .split(" ")
+      .filter(Boolean)
+      .map((part) => part[0]?.toUpperCase() ?? "")
+      .join("")
+      .slice(0, 2);
+
   return (
     <section id="contact" className="py-24 bg-secondary">
       <div className="container mx-auto px-4">
@@ -46,24 +60,24 @@ const Contact = () => {
               key={index}
               className="bg-card p-8 rounded-xl border border-border shadow-soft hover:shadow-elevated transition-all duration-300"
             >
-              <div className="space-y-5">
+              <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <User className="h-5 w-5 text-primary" />
-                  </div>
+                  <Avatar className="h-16 w-16 border-2 border-primary/20 shadow-sm">
+                    <AvatarImage
+                      src={person.imageUrl}
+                      alt={`${person.name} portrait`}
+                    />
+                    <AvatarFallback className="text-lg font-semibold text-primary bg-primary/10">
+                      {getInitials(person.name)}
+                    </AvatarFallback>
+                  </Avatar>
                   <div>
-                    <p className="text-sm text-muted-foreground">Name</p>
-                    <h3 className="font-display text-xl">{person.name}</h3>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Briefcase className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Position</p>
-                    <p className="font-medium">{person.position}</p>
+                    <h3 className="font-display text-xl text-foreground">
+                      {person.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {person.position}
+                    </p>
                   </div>
                 </div>
 

@@ -69,7 +69,7 @@ const Header = () => {
             size="lg"
             className="rounded-full bg-gradient-to-r from-primary via-primary/80 to-primary/60 px-6 text-sm font-semibold text-primary-foreground shadow-lg ring-1 ring-primary/20 transition-transform hover:-translate-y-0.5 hover:ring-2 hover:ring-primary/30"
           >
-            Join the Movement
+            Join the OC
           </Button>
         </div>
 
@@ -108,7 +108,7 @@ const Header = () => {
               </a>
             ))}
             <Button className="mt-2 rounded-full bg-gradient-to-r from-primary via-primary/80 to-primary/60 text-sm font-semibold text-primary-foreground shadow-md ring-1 ring-primary/20">
-              Join the Movement
+              Join the OC
             </Button>
           </div>
         </nav>
