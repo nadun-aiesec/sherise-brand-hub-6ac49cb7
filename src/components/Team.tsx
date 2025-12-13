@@ -26,7 +26,8 @@ const Team = () => {
       role: "OCP",
       title: "Organizing Committee President",
       count: 1,
-      description: "Leads the entire OC to a financially and logistically successful event",
+      description:
+        "Leads the entire OC to a financially and logistically successful event",
       jobDescription: [
         "Lead the entire OC to a financially and logistically successful event",
         "Ensure the event is meeting its goals agreed upon between the OC and the EB of AIESEC in SLIIT",
@@ -116,7 +117,8 @@ const Team = () => {
       role: "OCVP PD",
       title: "Partnership Development VP",
       count: 4,
-      description: "Develops partnerships with stakeholders and NGOs for support",
+      description:
+        "Develops partnerships with stakeholders and NGOs for support",
       jobDescription: [
         "Develop partnerships with Stakeholders & NGOs",
         "Develop partnerships with organizations in order to get monetary or in-kind support",
@@ -144,7 +146,8 @@ const Team = () => {
       role: "OCVP Delivery",
       title: "Delivery Vice President",
       count: 1,
-      description: "Ensures quality and experience delivery for all participants",
+      description:
+        "Ensures quality and experience delivery for all participants",
       jobDescription: [
         "Delegate Communication",
         "Delegate Interaction, communication & coordination",
@@ -235,15 +238,15 @@ const Team = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+          {/* <span className="text-sm font-semibold text-primary uppercase tracking-wider">
             Our Team
-          </span>
+          </span> */}
           <h2 className="font-display text-4xl md:text-5xl mt-4 mb-6">
             Organizing Committee <span className="text-primary">Structure</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          {/* <p className="text-lg text-muted-foreground">
             A dedicated team of {totalMembers} passionate individuals working together to make Project SheRise a success.
-          </p>
+          </p> */}
         </div>
 
         {/* Team Structure Grid */}
@@ -256,16 +259,22 @@ const Team = () => {
             >
               <div className="bg-secondary p-6">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-primary">{member.role}</span>
+                  <span className="text-sm font-semibold text-primary">
+                    {member.role}
+                  </span>
                   <div className="flex items-center gap-1.5 bg-background px-3 py-1 rounded-full">
                     <Users className="h-4 w-4 text-muted-foreground" />
-                    <span className="font-medium text-foreground">{member.count}</span>
+                    <span className="font-medium text-foreground">
+                      {member.count}
+                    </span>
                   </div>
                 </div>
                 <h3 className="font-display text-xl mt-3">{member.title}</h3>
               </div>
               <div className="p-6">
-                <p className="text-muted-foreground text-sm">{member.description}</p>
+                <p className="text-muted-foreground text-sm">
+                  {member.description}
+                </p>
                 <p className="text-xs text-primary mt-3 font-medium group-hover:underline">
                   Click to view details →
                 </p>
@@ -275,17 +284,25 @@ const Team = () => {
         </div>
 
         {/* Role Details Dialog */}
-        <Dialog open={!!selectedRole} onOpenChange={() => setSelectedRole(null)}>
+        <Dialog
+          open={!!selectedRole}
+          onOpenChange={() => setSelectedRole(null)}
+        >
           <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto">
             {selectedRole && (
               <>
                 <DialogHeader>
                   <div className="bg-secondary -mx-6 -mt-6 p-6 mb-4 rounded-t-lg">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-semibold text-primary">{selectedRole.role}</span>
+                      <span className="text-sm font-semibold text-primary">
+                        {selectedRole.role}
+                      </span>
                       <div className="flex items-center gap-1.5 bg-background px-3 py-1 rounded-full">
                         <Users className="h-4 w-4 text-muted-foreground" />
-                        <span className="font-medium">{selectedRole.count} position{selectedRole.count > 1 ? 's' : ''}</span>
+                        <span className="font-medium">
+                          {selectedRole.count} position
+                          {selectedRole.count > 1 ? "s" : ""}
+                        </span>
                       </div>
                     </div>
                     <DialogTitle className="font-display text-2xl">
@@ -306,7 +323,10 @@ const Team = () => {
                     </div>
                     <ul className="space-y-2">
                       {selectedRole.jobDescription.map((item, index) => (
-                        <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <li
+                          key={index}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
                           <span className="text-primary mt-1">•</span>
                           {item}
                         </li>
@@ -318,7 +338,9 @@ const Team = () => {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <Sparkles className="h-5 w-5 text-primary" />
-                      <h4 className="font-display text-lg">Skills & Knowledge</h4>
+                      <h4 className="font-display text-lg">
+                        Skills & Knowledge
+                      </h4>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {selectedRole.skills.map((skill, index) => (
@@ -336,11 +358,16 @@ const Team = () => {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <Target className="h-5 w-5 text-primary" />
-                      <h4 className="font-display text-lg">KPIs / Measures of Success</h4>
+                      <h4 className="font-display text-lg">
+                        KPIs / Measures of Success
+                      </h4>
                     </div>
                     <ul className="space-y-2">
                       {selectedRole.kpis.map((kpi, index) => (
-                        <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <li
+                          key={index}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
                           <span className="text-primary mt-1">✓</span>
                           {kpi}
                         </li>
@@ -354,12 +381,15 @@ const Team = () => {
         </Dialog>
 
         {/* Join CTA */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="inline-flex flex-col items-center p-8 bg-secondary rounded-2xl">
             <Users className="h-12 w-12 text-primary mb-4" />
-            <h3 className="font-display text-2xl mb-2">Want to Join Our Team?</h3>
+            <h3 className="font-display text-2xl mb-2">
+              Want to Join Our Team?
+            </h3>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Be part of this transformative initiative and help empower women in rural areas.
+              Be part of this transformative initiative and help empower women
+              in rural areas.
             </p>
             <a
               href="#contact"
@@ -368,7 +398,7 @@ const Team = () => {
               Apply Now
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

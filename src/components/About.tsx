@@ -5,22 +5,26 @@ const About = () => {
     {
       icon: BookOpen,
       title: "Financial Literacy",
-      description: "Comprehensive training on managing finances, budgeting, and understanding financial concepts.",
+      description:
+        "Comprehensive training on managing finances, budgeting, and understanding financial concepts.",
     },
     {
       icon: Briefcase,
       title: "Business Planning",
-      description: "Hands-on workshops to develop sustainable business plans and entrepreneurial skills.",
+      description:
+        "Hands-on workshops to develop sustainable business plans and entrepreneurial skills.",
     },
     {
       icon: DollarSign,
       title: "Microfinance Support",
-      description: "Access to funding opportunities and microloans to kickstart their business ventures.",
+      description:
+        "Access to funding opportunities and microloans to kickstart their business ventures.",
     },
     {
       icon: Heart,
       title: "Community Building",
-      description: "Creating a supportive network of women entrepreneurs who uplift each other.",
+      description:
+        "Creating a supportive network of women entrepreneurs who uplift each other.",
     },
   ];
 
@@ -29,15 +33,16 @@ const About = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+          {/* <span className="text-sm font-semibold text-primary uppercase tracking-wider">
             About the Project
-          </span>
+          </span> */}
           <h2 className="font-display text-4xl md:text-5xl mt-4 mb-6">
             The Third Phase of <span className="text-primary">EmpowerAll</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Project SheRise focuses on Entrepreneurship Support for Women in Rural Areas, 
-            empowering them with skills, knowledge, and resources to build sustainable livelihoods.
+            Project SheRise focuses on Entrepreneurship Support for Women in
+            Rural Areas, empowering them with skills, knowledge, and resources
+            to build sustainable livelihoods.
           </p>
         </div>
 
@@ -53,7 +58,9 @@ const About = () => {
                 <pillar.icon className="h-6 w-6 text-primary group-hover:text-primary-foreground" />
               </div>
               <h3 className="font-display text-xl mb-2">{pillar.title}</h3>
-              <p className="text-muted-foreground text-sm">{pillar.description}</p>
+              <p className="text-muted-foreground text-sm">
+                {pillar.description}
+              </p>
             </div>
           ))}
         </div>
@@ -62,10 +69,15 @@ const About = () => {
         <div className="mt-16 bg-primary rounded-2xl p-8 md:p-12 text-primary-foreground">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
-              <span className="text-sm font-medium opacity-80">Title Partner</span>
-              <h3 className="font-display text-3xl md:text-4xl mt-2">Emerald</h3>
+              <span className="text-sm font-medium opacity-80">
+                Title Partner
+              </span>
+              <h3 className="font-display text-3xl md:text-4xl mt-2">
+                Emerald
+              </h3>
               <p className="opacity-80 mt-3 max-w-md">
-                Proudly partnered with Emerald to bring transformative opportunities to women entrepreneurs.
+                Proudly partnered with Emerald to bring transformative
+                opportunities to women entrepreneurs.
               </p>
             </div>
             <div className="flex items-center gap-4">

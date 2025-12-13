@@ -4,7 +4,10 @@ import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-20"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -18,12 +21,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full mb-6 animate-slide-up">
+          {/* <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full mb-6 animate-slide-up">
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
               AIESEC in SLIIT • EmpowerAll Initiative
             </span>
-          </div>
+          </div> */}
 
           {/* Main Heading */}
           <h1 className="font-display text-5xl md:text-7xl leading-tight mb-6 animate-slide-up animation-delay-100">
@@ -33,8 +36,9 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl animate-slide-up animation-delay-200">
-            Project SheRise supports 150+ women in rural areas through entrepreneurship training, 
-            business planning workshops, and microfinance opportunities.
+            Project SheRise supports 150+ women in rural areas through
+            entrepreneurship training, business planning workshops, and
+            microfinance opportunities.
           </p>
 
           {/* CTA Buttons */}
@@ -53,21 +57,31 @@ const Hero = () => {
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
                 <Users className="h-5 w-5 text-primary" />
-                <span className="font-display text-3xl md:text-4xl text-foreground">150+</span>
+                <span className="font-display text-3xl md:text-4xl text-foreground">
+                  150+
+                </span>
               </div>
-              <span className="text-sm text-muted-foreground">Women Empowered</span>
+              <span className="text-sm text-muted-foreground">
+                Women Empowered
+              </span>
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
                 <Target className="h-5 w-5 text-primary" />
-                <span className="font-display text-3xl md:text-4xl text-foreground">14</span>
+                <span className="font-display text-3xl md:text-4xl text-foreground">
+                  14
+                </span>
               </div>
-              <span className="text-sm text-muted-foreground">Team Members</span>
+              <span className="text-sm text-muted-foreground">
+                Team Members
+              </span>
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2 mb-1">
                 <Sparkles className="h-5 w-5 text-primary" />
-                <span className="font-display text-3xl md:text-4xl text-foreground">2026</span>
+                <span className="font-display text-3xl md:text-4xl text-foreground">
+                  2026
+                </span>
               </div>
               <span className="text-sm text-muted-foreground">Launch Year</span>
             </div>
