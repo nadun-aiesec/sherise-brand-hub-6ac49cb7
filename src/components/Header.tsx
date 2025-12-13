@@ -9,7 +9,6 @@ const Header = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Team", href: "#team" },
-    { name: "Partners", href: "#partners" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -19,11 +18,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="bg-primary rounded-lg px-3 py-1.5">
-              <span className="font-display text-xl font-bold text-primary-foreground">
-                She<span className="font-sans">Rise</span>
-              </span>
-            </div>
+            <span className="font-display text-2xl text-foreground">
+              She<span className="text-primary">Rise</span>
+            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -41,7 +38,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default">
+            <Button size="default" className="rounded-full">
               Join the Movement
             </Button>
           </div>
@@ -73,7 +70,7 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
-              <Button variant="hero" size="default" className="mt-2">
+              <Button size="default" className="mt-2 rounded-full">
                 Join the Movement
               </Button>
             </div>

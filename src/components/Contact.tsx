@@ -24,15 +24,15 @@ const contactPersons: ContactPerson[] = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-muted/30">
+    <section id="contact" className="py-24 bg-secondary">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">
             Get in Touch
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
-            Contact <span className="text-gradient">Us</span>
+          <h2 className="font-display text-4xl md:text-5xl mt-4 mb-6">
+            Contact <span className="text-primary">Us</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Reach out to our team for any inquiries about Project SheRise.
@@ -44,48 +44,48 @@ const Contact = () => {
           {contactPersons.map((person, index) => (
             <div
               key={index}
-              className="bg-card p-8 rounded-3xl border border-border shadow-soft hover:shadow-lg transition-all duration-300"
+              className="bg-card p-8 rounded-xl border border-border shadow-soft hover:shadow-elevated transition-all duration-300"
             >
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <User className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Name</p>
-                    <h3 className="font-display text-xl font-bold">{person.name}</h3>
+                    <h3 className="font-display text-xl">{person.name}</h3>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
-                    <Briefcase className="h-5 w-5 text-accent" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Briefcase className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Position</p>
-                    <p className="font-semibold">{person.position}</p>
+                    <p className="font-medium">{person.position}</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-secondary" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
-                    <a href={`tel:${person.phone}`} className="font-semibold hover:text-primary transition-colors">
+                    <a href={`tel:${person.phone}`} className="font-medium hover:text-primary transition-colors">
                       {person.phone}
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href={`mailto:${person.email}`} className="font-semibold hover:text-primary transition-colors">
+                    <a href={`mailto:${person.email}`} className="font-medium hover:text-primary transition-colors">
                       {person.email}
                     </a>
                   </div>

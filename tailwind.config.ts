@@ -47,11 +47,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sherise: {
-          pink: "hsl(var(--sherise-pink))",
-          navy: "hsl(var(--sherise-navy))",
-          orange: "hsl(var(--sherise-orange))",
-        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -64,8 +59,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        sans: ['Plus Jakarta Sans', 'sans-serif'],
+        display: ['DM Serif Display', 'serif'],
+        sans: ['DM Sans', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
