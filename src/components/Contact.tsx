@@ -28,9 +28,9 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+          {/* <span className="text-sm font-semibold text-primary uppercase tracking-wider">
             Get in Touch
-          </span>
+          </span> */}
           <h2 className="font-display text-4xl md:text-5xl mt-4 mb-6">
             Contact <span className="text-primary">Us</span>
           </h2>
@@ -73,7 +73,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
-                    <a href={`tel:${person.phone}`} className="font-medium hover:text-primary transition-colors">
+                    <a
+                      href={`tel:${person.phone}`}
+                      className="font-medium hover:text-primary transition-colors"
+                    >
                       {person.phone}
                     </a>
                   </div>
@@ -85,7 +88,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href={`mailto:${person.email}`} className="font-medium hover:text-primary transition-colors">
+                    <a
+                      href={`mailto:${person.email}`}
+                      className="font-medium hover:text-primary transition-colors"
+                    >
                       {person.email}
                     </a>
                   </div>

@@ -143,8 +143,8 @@ const Team = () => {
       ],
     },
     {
-      role: "OCVP Delivery",
-      title: "Delivery Vice President",
+      role: "OCVP DEL",
+      title: "Delegates Vice President",
       count: 1,
       description:
         "Ensures quality and experience delivery for all participants",

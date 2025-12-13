@@ -42,7 +42,7 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up animation-delay-300">
+          {/* <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up animation-delay-300">
             <Button size="lg" className="rounded-full">
               Get Involved
               <ArrowRight className="h-5 w-5" />
@@ -50,7 +50,7 @@ const Hero = () => {
             <Button variant="outline" size="lg" className="rounded-full">
               Learn More
             </Button>
-          </div>
+          </div> */}
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 animate-slide-up animation-delay-400">
