@@ -33,7 +33,7 @@ const Header = () => {
         "fixed inset-x-0 top-0 z-50 border-b transition-[background,box-shadow,border-color] duration-300",
         isScrolled
           ? "border-border/60 bg-background/95 shadow-lg backdrop-blur-xl"
-          : "border-transparent bg-transparent backdrop-blur-0",
+          : "border-transparent bg-transparent backdrop-blur-0"
       )}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 md:px-6 md:py-5">
@@ -80,7 +80,11 @@ const Header = () => {
           aria-expanded={isMenuOpen}
           aria-label="Toggle navigation"
         >
-          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {isMenuOpen ? (
+            <X className="h-5 w-5" />
+          ) : (
+            <Menu className="h-5 w-5" />
+          )}
         </button>
       </div>
 
@@ -88,7 +92,7 @@ const Header = () => {
       <div
         className={cn(
           "md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out",
-          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
+          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         )}
       >
         <nav className="mx-4 mb-4 rounded-3xl border border-border/70 bg-background/95 p-6 shadow-lg">
