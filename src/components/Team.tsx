@@ -13,7 +13,6 @@ interface RoleDetails {
   title: string;
   count: number;
   description: string;
-  color: string;
   jobDescription: string[];
   skills: string[];
   kpis: string[];
@@ -28,7 +27,6 @@ const Team = () => {
       title: "Organizing Committee President",
       count: 1,
       description: "Leads the entire OC to a financially and logistically successful event",
-      color: "bg-gradient-hero text-primary-foreground",
       jobDescription: [
         "Lead the entire OC to a financially and logistically successful event",
         "Ensure the event is meeting its goals agreed upon between the OC and the EB of AIESEC in SLIIT",
@@ -62,7 +60,6 @@ const Team = () => {
       title: "Finance Vice President",
       count: 1,
       description: "Manages event finances, budgets, and cash flow",
-      color: "bg-secondary text-secondary-foreground",
       jobDescription: [
         "Manage the finance of the event",
         "Cash Flow management of the event",
@@ -90,7 +87,6 @@ const Team = () => {
       title: "Logistics Vice President",
       count: 3,
       description: "Handles venue, event management, and technical operations",
-      color: "bg-accent text-accent-foreground",
       jobDescription: [
         "Responsible for finding a suitable venue and managing venue management",
         "Responsible for All Logistic Requirements Before and during the Project",
@@ -121,7 +117,6 @@ const Team = () => {
       title: "Partnership Development VP",
       count: 4,
       description: "Develops partnerships with stakeholders and NGOs for support",
-      color: "bg-primary text-primary-foreground",
       jobDescription: [
         "Develop partnerships with Stakeholders & NGOs",
         "Develop partnerships with organizations in order to get monetary or in-kind support",
@@ -150,7 +145,6 @@ const Team = () => {
       title: "Delivery Vice President",
       count: 1,
       description: "Ensures quality and experience delivery for all participants",
-      color: "bg-sherise-orange text-foreground",
       jobDescription: [
         "Delegate Communication",
         "Delegate Interaction, communication & coordination",
@@ -179,7 +173,6 @@ const Team = () => {
       title: "Marketing Vice President",
       count: 2,
       description: "Manages marketing campaigns and promotional content",
-      color: "bg-muted text-foreground",
       jobDescription: [
         "Planning Event Marketing Timeline",
         "Creating and implementing marketing strategies",
@@ -215,7 +208,6 @@ const Team = () => {
       title: "Public Relations VP",
       count: 2,
       description: "Handles external communications and media relations",
-      color: "bg-border text-foreground",
       jobDescription: [
         "Contact media houses (newspapers, TV) to cover the social impact of the project and the partnership with Emerald",
         "Coordinate photography and videography to create the mandatory 'Aftermovie' and Photo Album",
@@ -246,8 +238,8 @@ const Team = () => {
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">
             Our Team
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
-            Organizing Committee <span className="text-gradient">Structure</span>
+          <h2 className="font-display text-4xl md:text-5xl mt-4 mb-6">
+            Organizing Committee <span className="text-primary">Structure</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             A dedicated team of {totalMembers} passionate individuals working together to make Project SheRise a success.
@@ -260,17 +252,17 @@ const Team = () => {
             <div
               key={member.role}
               onClick={() => setSelectedRole(member)}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card hover:shadow-elevated transition-all duration-300 cursor-pointer hover:scale-[1.02]"
+              className="group relative overflow-hidden rounded-xl border border-border bg-card hover:shadow-elevated transition-all duration-300 cursor-pointer hover:border-primary"
             >
-              <div className={`${member.color} p-6`}>
+              <div className="bg-secondary p-6">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold opacity-90">{member.role}</span>
-                  <div className="flex items-center gap-1.5 bg-background/20 px-3 py-1 rounded-full">
-                    <Users className="h-4 w-4" />
-                    <span className="font-bold">{member.count}</span>
+                  <span className="text-sm font-semibold text-primary">{member.role}</span>
+                  <div className="flex items-center gap-1.5 bg-background px-3 py-1 rounded-full">
+                    <Users className="h-4 w-4 text-muted-foreground" />
+                    <span className="font-medium text-foreground">{member.count}</span>
                   </div>
                 </div>
-                <h3 className="font-display text-xl font-bold mt-3">{member.title}</h3>
+                <h3 className="font-display text-xl mt-3">{member.title}</h3>
               </div>
               <div className="p-6">
                 <p className="text-muted-foreground text-sm">{member.description}</p>
@@ -288,15 +280,15 @@ const Team = () => {
             {selectedRole && (
               <>
                 <DialogHeader>
-                  <div className={`${selectedRole.color} -mx-6 -mt-6 p-6 mb-4 rounded-t-lg`}>
+                  <div className="bg-secondary -mx-6 -mt-6 p-6 mb-4 rounded-t-lg">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-semibold opacity-90">{selectedRole.role}</span>
-                      <div className="flex items-center gap-1.5 bg-background/20 px-3 py-1 rounded-full">
-                        <Users className="h-4 w-4" />
-                        <span className="font-bold">{selectedRole.count} position{selectedRole.count > 1 ? 's' : ''}</span>
+                      <span className="text-sm font-semibold text-primary">{selectedRole.role}</span>
+                      <div className="flex items-center gap-1.5 bg-background px-3 py-1 rounded-full">
+                        <Users className="h-4 w-4 text-muted-foreground" />
+                        <span className="font-medium">{selectedRole.count} position{selectedRole.count > 1 ? 's' : ''}</span>
                       </div>
                     </div>
-                    <DialogTitle className="font-display text-2xl font-bold">
+                    <DialogTitle className="font-display text-2xl">
                       {selectedRole.title}
                     </DialogTitle>
                   </div>
@@ -310,7 +302,7 @@ const Team = () => {
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <Briefcase className="h-5 w-5 text-primary" />
-                      <h4 className="font-display font-bold text-lg">Job Description</h4>
+                      <h4 className="font-display text-lg">Job Description</h4>
                     </div>
                     <ul className="space-y-2">
                       {selectedRole.jobDescription.map((item, index) => (
@@ -325,14 +317,14 @@ const Team = () => {
                   {/* Skills & Knowledge */}
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <Sparkles className="h-5 w-5 text-sherise-orange" />
-                      <h4 className="font-display font-bold text-lg">Skills & Knowledge</h4>
+                      <Sparkles className="h-5 w-5 text-primary" />
+                      <h4 className="font-display text-lg">Skills & Knowledge</h4>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {selectedRole.skills.map((skill, index) => (
                         <span
                           key={index}
-                          className="px-3 py-1.5 bg-secondary text-secondary-foreground text-sm rounded-full"
+                          className="px-3 py-1.5 bg-secondary text-foreground text-sm rounded-full"
                         >
                           {skill}
                         </span>
@@ -343,13 +335,13 @@ const Team = () => {
                   {/* KPIs */}
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <Target className="h-5 w-5 text-accent" />
-                      <h4 className="font-display font-bold text-lg">KPIs / Measures of Success</h4>
+                      <Target className="h-5 w-5 text-primary" />
+                      <h4 className="font-display text-lg">KPIs / Measures of Success</h4>
                     </div>
                     <ul className="space-y-2">
                       {selectedRole.kpis.map((kpi, index) => (
                         <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <span className="text-accent mt-1">✓</span>
+                          <span className="text-primary mt-1">✓</span>
                           {kpi}
                         </li>
                       ))}
@@ -363,15 +355,15 @@ const Team = () => {
 
         {/* Join CTA */}
         <div className="mt-16 text-center">
-          <div className="inline-flex flex-col items-center p-8 bg-muted/50 rounded-3xl">
+          <div className="inline-flex flex-col items-center p-8 bg-secondary rounded-2xl">
             <Users className="h-12 w-12 text-primary mb-4" />
-            <h3 className="font-display text-2xl font-bold mb-2">Want to Join Our Team?</h3>
+            <h3 className="font-display text-2xl mb-2">Want to Join Our Team?</h3>
             <p className="text-muted-foreground mb-6 max-w-md">
               Be part of this transformative initiative and help empower women in rural areas.
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-primary text-primary-foreground px-8 py-3 rounded-xl font-semibold shadow-elevated hover:opacity-90 transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
             >
               Apply Now
             </a>
