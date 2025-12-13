@@ -54,57 +54,57 @@ const Contact = () => {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {contactPersons.map((person, index) => (
             <div
               key={index}
-              className="bg-card p-8 rounded-xl border border-border shadow-soft hover:shadow-elevated transition-all duration-300"
+              className="bg-card p-10 rounded-2xl border border-border shadow-lg hover:-translate-y-1 hover:shadow-elevated transition-all duration-300"
             >
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <Avatar className="h-16 w-16 border-2 border-primary/20 shadow-sm">
+              <div className="space-y-8">
+                <div className="flex items-center gap-6">
+                  <Avatar className="h-20 w-20 border-2 border-primary/20 shadow-md">
                     <AvatarImage
                       src={person.imageUrl}
                       alt={`${person.name} portrait`}
                     />
-                    <AvatarFallback className="text-lg font-semibold text-primary bg-primary/10">
+                    <AvatarFallback className="text-xl font-semibold text-primary bg-primary/10">
                       {getInitials(person.name)}
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <h3 className="font-display text-xl text-foreground">
+                    <h3 className="font-display text-2xl text-foreground">
                       {person.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-base text-muted-foreground">
                       {person.position}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-primary" />
+                <div className="flex items-center gap-5">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
                     <a
                       href={`tel:${person.phone}`}
-                      className="font-medium hover:text-primary transition-colors"
+                      className="text-lg font-semibold hover:text-primary transition-colors"
                     >
                       {person.phone}
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-primary" />
+                <div className="flex items-center gap-5">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
                     <a
                       href={`mailto:${person.email}`}
-                      className="font-medium hover:text-primary transition-colors"
+                      className="text-lg font-semibold hover:text-primary transition-colors"
                     >
                       {person.email}
                     </a>
