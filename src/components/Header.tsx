@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, Sparkles, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoImg from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,9 +39,13 @@ const Header = () => {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 md:px-6 md:py-5">
         {/* Logo */}
-        <a href="#home" className="group inline-flex items-center gap-2">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-            <Sparkles className="h-5 w-5" />
+        <a href="#home" className="group inline-flex items-center gap-3">
+          <span className="inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-primary/10">
+            <img
+              src={logoImg}
+              alt="SheRise"
+              className="h-10 w-10 object-contain"
+            />
           </span>
           <span className="font-display text-xl text-foreground transition-colors group-hover:text-primary md:text-2xl">
             She<span className="text-primary">Rise</span>
@@ -68,8 +73,15 @@ const Header = () => {
           <Button
             size="lg"
             className="rounded-full bg-gradient-to-r from-primary via-primary/80 to-primary/60 px-6 text-sm font-semibold text-primary-foreground shadow-lg ring-1 ring-primary/20 transition-transform hover:-translate-y-0.5 hover:ring-2 hover:ring-primary/30"
+            asChild
           >
-            Join the OC
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSetyORTMM1IdU5Jvs1ou2PZ2exg7fPdWy5zWDi9VK-0vw8CWg/viewform?usp=dialog"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Join the OC
+            </a>
           </Button>
         </div>
 
@@ -107,8 +119,18 @@ const Header = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="mt-2 rounded-full bg-gradient-to-r from-primary via-primary/80 to-primary/60 text-sm font-semibold text-primary-foreground shadow-md ring-1 ring-primary/20">
-              Join the OC
+            <Button
+              className="mt-2 rounded-full bg-gradient-to-r from-primary via-primary/80 to-primary/60 text-sm font-semibold text-primary-foreground shadow-md ring-1 ring-primary/20"
+              asChild
+            >
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSetyORTMM1IdU5Jvs1ou2PZ2exg7fPdWy5zWDi9VK-0vw8CWg/viewform?usp=dialog"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Join the OC
+              </a>
             </Button>
           </div>
         </nav>
