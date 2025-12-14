@@ -40,15 +40,12 @@ const Header = () => {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 md:px-6 md:py-5">
         {/* Logo */}
         <a href="#home" className="group inline-flex items-center gap-3">
-          <span className="inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-primary/10">
+          <span className="inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-primary/10">
             <img
               src={logoImg}
               alt="SheRise"
-              className="h-10 w-10 object-contain"
+              className="h-12 w-12 object-contain"
             />
-          </span>
-          <span className="font-display text-xl text-foreground transition-colors group-hover:text-primary md:text-2xl">
-            She<span className="text-primary">Rise</span>
           </span>
         </a>
 
