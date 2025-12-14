@@ -59,7 +59,7 @@ const Team = () => {
     },
     {
       role: "OCVP Finance",
-      title: "Finance Vice President",
+      title: "Vice President Finance",
       count: 1,
       description: "Manages event finances, budgets, and cash flow",
       jobDescription: [
@@ -86,7 +86,7 @@ const Team = () => {
     },
     {
       role: "OCVP Logistics",
-      title: "Logistics Vice President",
+      title: "Vice President Logistics",
       count: 3,
       description: "Handles venue, event management, and technical operations",
       jobDescription: [
@@ -145,7 +145,7 @@ const Team = () => {
     },
     {
       role: "OCVP DEL",
-      title: "Delegates Vice President",
+      title: "Vice President Delegates",
       count: 1,
       description:
         "Ensures quality and experience delivery for all participants",
@@ -174,7 +174,7 @@ const Team = () => {
     },
     {
       role: "OCVP Marketing",
-      title: "Marketing Vice President",
+      title: "Vice President Marketing",
       count: 2,
       description: "Manages marketing campaigns and promotional content",
       jobDescription: [

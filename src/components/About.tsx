@@ -66,24 +66,31 @@ const About = () => {
         </div>
 
         {/* Partner Highlight */}
-        <div className="mt-16 bg-primary rounded-2xl p-8 md:p-12 text-primary-foreground">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div>
-              <span className="text-sm font-medium opacity-80">
-                Title Partner
-              </span>
-              <h3 className="font-display text-3xl md:text-4xl mt-2">
-                Emerald
-              </h3>
-              <p className="opacity-80 mt-3 max-w-md">
-                Proudly partnered with Emerald to bring transformative
-                opportunities to women entrepreneurs.
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <div className="text-center px-6 py-4 bg-primary-foreground/10 rounded-xl">
-                <div className="font-display text-3xl">March</div>
-                <div className="text-sm opacity-80">2026</div>
+        <div className="mt-16 overflow-hidden rounded-3xl bg-gradient-to-r from-[#0a3d2c] via-[#0b5c3a] to-[#0e7c4a] p-[1px] shadow-lg">
+          <div className="relative rounded-[2.75rem] bg-[rgba(11,63,48,0.92)] p-8 md:p-12 text-emerald-50">
+            <div className="absolute inset-y-0 right-0 w-1/2 translate-x-16 rounded-full bg-emerald-500/10 blur-3xl" />
+            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+              <div className="max-w-xl">
+                <span className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200/80">
+                  Title Partner
+                </span>
+                <h3 className="font-display text-3xl md:text-4xl mt-3 text-emerald-50">
+                  Emerald
+                </h3>
+                <p className="mt-4 text-base text-emerald-100/80">
+                  Proudly partnered with Emerald to bring transformative
+                  opportunities to women entrepreneurs.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="rounded-2xl border border-emerald-200/30 bg-emerald-100/10 px-7 py-5 text-center text-emerald-50">
+                  <div className="font-display text-3xl tracking-wide">
+                    March
+                  </div>
+                  <div className="mt-1 text-sm uppercase tracking-[0.2em] text-emerald-100/70">
+                    2026
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -11,18 +11,18 @@ interface ContactPerson {
 
 const contactPersons: ContactPerson[] = [
   {
-    name: "Contact Person 1",
-    position: "Position Title",
-    phone: "+94 XX XXX XXXX",
-    email: "email@aiesec.lk",
+    name: "Nadun Weerakkody",
+    position: "LCVPe BD",
+    phone: "+94 71 743 9912",
+    email: "nadunweerakkody@aiesec.lk",
     imageUrl:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&w=320&h=320&q=80",
   },
   {
-    name: "Contact Person 2",
-    position: "Position Title",
-    phone: "+94 XX XXX XXXX",
-    email: "email@aiesec.lk",
+    name: "Shenise Pronk",
+    position: "LCVPe PR",
+    phone: "+94 76 468 4101",
+    email: "shenisepronk@aiesec.net",
     imageUrl:
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=facearea&w=320&h=320&q=80",
   },
@@ -46,7 +46,7 @@ const Contact = () => {
             Get in Touch
           </span> */}
           <h2 className="font-display text-4xl md:text-5xl mt-4 mb-6">
-            Contact <span className="text-primary">Us</span>
+            Contact <span className="text-primary">EMs</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Reach out to our team for any inquiries about Project SheRise.
