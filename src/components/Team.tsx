@@ -7,6 +7,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import { cn } from "@/lib/utils";
 
 interface RoleDetails {
   role: string;
@@ -232,6 +233,43 @@ const Team = () => {
   ];
 
   const totalMembers = teamStructure.reduce((sum, item) => sum + item.count, 0);
+  const ocpRole = teamStructure.find((member) => member.role === "OCP") ?? null;
+  const otherRoles = teamStructure.filter((member) => member.role !== "OCP");
+
+  const MemberCard = ({
+    member,
+    className,
+  }: {
+    member: RoleDetails;
+    className?: string;
+  }) => (
+    <div
+      onClick={() => setSelectedRole(member)}
+      className={cn(
+        "group relative overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 cursor-pointer hover:border-primary hover:shadow-elevated",
+        className
+      )}
+    >
+      <div className="bg-secondary p-6">
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-semibold text-primary">
+            {member.role}
+          </span>
+          <div className="flex items-center gap-1.5 bg-background px-3 py-1 rounded-full">
+            <Users className="h-4 w-4 text-muted-foreground" />
+            <span className="font-medium text-foreground">{member.count}</span>
+          </div>
+        </div>
+        <h3 className="font-display text-xl mt-3">{member.title}</h3>
+      </div>
+      <div className="p-6">
+        <p className="text-muted-foreground text-sm">{member.description}</p>
+        <p className="text-xs text-primary mt-3 font-medium group-hover:underline">
+          Click to view details →
+        </p>
+      </div>
+    </div>
+  );
 
   return (
     <section id="team" className="py-24">
@@ -249,37 +287,22 @@ const Team = () => {
           </p> */}
         </div>
 
+        {/* OCP Highlight */}
+        {ocpRole && (
+          <div className="mb-10 flex justify-center">
+            <div className="w-full max-w-2xl">
+              <MemberCard
+                member={ocpRole}
+                className="rounded-2xl border-primary/30 bg-card/95 shadow-lg hover:-translate-y-1"
+              />
+            </div>
+          </div>
+        )}
+
         {/* Team Structure Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {teamStructure.map((member) => (
-            <div
-              key={member.role}
-              onClick={() => setSelectedRole(member)}
-              className="group relative overflow-hidden rounded-xl border border-border bg-card hover:shadow-elevated transition-all duration-300 cursor-pointer hover:border-primary"
-            >
-              <div className="bg-secondary p-6">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-primary">
-                    {member.role}
-                  </span>
-                  <div className="flex items-center gap-1.5 bg-background px-3 py-1 rounded-full">
-                    <Users className="h-4 w-4 text-muted-foreground" />
-                    <span className="font-medium text-foreground">
-                      {member.count}
-                    </span>
-                  </div>
-                </div>
-                <h3 className="font-display text-xl mt-3">{member.title}</h3>
-              </div>
-              <div className="p-6">
-                <p className="text-muted-foreground text-sm">
-                  {member.description}
-                </p>
-                <p className="text-xs text-primary mt-3 font-medium group-hover:underline">
-                  Click to view details →
-                </p>
-              </div>
-            </div>
+          {otherRoles.map((member) => (
+            <MemberCard key={member.role} member={member} />
           ))}
         </div>
 
