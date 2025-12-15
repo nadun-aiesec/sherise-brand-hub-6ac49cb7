@@ -80,10 +80,10 @@ const Hero = () => {
               <div className="flex items-center gap-2 mb-1">
                 <Sparkles className="h-5 w-5 text-primary" />
                 <span className="font-display text-3xl md:text-4xl text-foreground">
-                  2026
+                  March 2026
                 </span>
               </div>
-              <span className="text-sm text-muted-foreground">Launch Year</span>
+              <span className="text-sm text-muted-foreground">Event Month</span>
             </div>
           </div>
         </div>
