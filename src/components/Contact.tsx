@@ -21,7 +21,7 @@ const contactPersons: ContactPerson[] = [
   },
   {
     name: "Shenise Pronk",
-    position: "LCVPe PR",
+    position: "LCVPe PR & EwA",
     phone: "+94 76 468 4101",
     email: "shenisepronk@aiesec.net",
     imageUrl: shenise,
