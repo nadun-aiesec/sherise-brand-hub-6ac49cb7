@@ -16,7 +16,7 @@ const contactPersons: ContactPerson[] = [
     name: "Nadun Weerakkody",
     position: "LCVPe BD",
     phone: "+94 71 743 9912",
-    email: "nadunweerakkody@aiesec.lk",
+    email: "nadunweerakkody@aiesec.net",
     imageUrl: nadun,
   },
   {
