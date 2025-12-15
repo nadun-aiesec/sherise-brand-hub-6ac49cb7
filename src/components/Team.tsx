@@ -316,7 +316,7 @@ const Team = () => {
             {selectedRole && (
               <>
                 <DialogHeader>
-                  <div className="bg-secondary -mx-6 -mt-6 p-6 mb-4 rounded-t-lg">
+                  <div className="bg-secondary -mx-8 -mt-10 mb-4 rounded-t-lg px-8 py-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-semibold text-primary">
                         {selectedRole.role}
