@@ -7,6 +7,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 interface RoleDetails {
@@ -404,24 +405,33 @@ const Team = () => {
         </Dialog>
 
         {/* Join CTA */}
-        {/* <div className="mt-16 text-center">
-          <div className="inline-flex flex-col items-center p-8 bg-secondary rounded-2xl">
-            <Users className="h-12 w-12 text-primary mb-4" />
-            <h3 className="font-display text-2xl mb-2">
-              Want to Join Our Team?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-md">
-              Be part of this transformative initiative and help empower women
-              in rural areas.
-            </p>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-all"
+        <div className="mt-16 text-center">
+          <div className="inline-flex flex-col items-center gap-6 rounded-3xl border border-border bg-secondary/80 px-10 py-12 shadow-soft backdrop-blur">
+            <div className="flex flex-col items-center gap-2">
+              <Users className="h-12 w-12 text-primary" />
+              <h3 className="font-display text-2xl md:text-3xl text-foreground">
+                Want to Join Our Team?
+              </h3>
+              <p className="max-w-xl text-sm md:text-base text-muted-foreground">
+                Step into leadership, drive impact, and help shape Project
+                SheRise for March 2026.
+              </p>
+            </div>
+            <Button
+              size="lg"
+              className="rounded-full bg-gradient-to-r from-primary via-primary/80 to-primary/60 px-8 text-sm md:text-base font-semibold text-primary-foreground shadow-lg ring-1 ring-primary/20 transition-transform hover:-translate-y-0.5 hover:ring-2 hover:ring-primary/30"
+              asChild
             >
-              Apply Now
-            </a>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSetyORTMM1IdU5Jvs1ou2PZ2exg7fPdWy5zWDi9VK-0vw8CWg/viewform?usp=dialog"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Join the OC
+              </a>
+            </Button>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
