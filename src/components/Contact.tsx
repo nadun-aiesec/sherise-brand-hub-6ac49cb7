@@ -1,7 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import nadun from "../assets/nadun.jpg";
-import shenise from "../assets/shenise.jpg";
+import nadun from "../assets/nadun.jpeg";
+import shenise from "../assets/shenise.png";
 
 interface ContactPerson {
   name: string;
