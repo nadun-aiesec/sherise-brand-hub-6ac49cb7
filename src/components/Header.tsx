@@ -40,11 +40,11 @@ const Header = () => {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-4 md:px-6 md:py-5">
         {/* Logo */}
         <a href="#home" className="group inline-flex items-center gap-3">
-          <span className="inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-primary/10">
+          <span className="inline-flex items-center justify-center">
             <img
               src={logoImg}
-              alt="SheRise"
-              className="h-12 w-12 object-contain"
+              alt="SheRise logo"
+              className="h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
             />
           </span>
         </a>
