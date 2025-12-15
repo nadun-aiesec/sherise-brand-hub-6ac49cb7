@@ -1,5 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import nadun from "../assets/nadun.jpg";
+import shenise from "../assets/shenise.jpg";
 
 interface ContactPerson {
   name: string;
@@ -15,16 +17,14 @@ const contactPersons: ContactPerson[] = [
     position: "LCVPe BD",
     phone: "+94 71 743 9912",
     email: "nadunweerakkody@aiesec.lk",
-    imageUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&w=320&h=320&q=80",
+    imageUrl: nadun,
   },
   {
     name: "Shenise Pronk",
     position: "LCVPe PR",
     phone: "+94 76 468 4101",
     email: "shenisepronk@aiesec.net",
-    imageUrl:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=facearea&w=320&h=320&q=80",
+    imageUrl: shenise,
   },
 ];
 
