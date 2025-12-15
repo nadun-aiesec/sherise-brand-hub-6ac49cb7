@@ -410,11 +410,11 @@ const Team = () => {
             <div className="flex flex-col items-center gap-2">
               <Users className="h-12 w-12 text-primary" />
               <h3 className="font-display text-2xl md:text-3xl text-foreground">
-                Want to Join Our Team?
+                Want to Join the OC?
               </h3>
               <p className="max-w-xl text-sm md:text-base text-muted-foreground">
                 Step into leadership, drive impact, and help shape Project
-                SheRise for March 2026.
+                SheRise.
               </p>
             </div>
             <Button
