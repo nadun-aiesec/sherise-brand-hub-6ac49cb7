@@ -262,6 +262,18 @@ const Team = () => {
           </div>
         </div>
         <h3 className="font-display text-xl mt-3">{member.title}</h3>
+        {/* Application deadline badge */}
+        <div className="mt-3">
+          {member.role === "OCP" ? (
+            <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+              Apply before 19th December • 8:00 PM
+            </span>
+          ) : (
+            <span className="inline-flex items-center rounded-full bg-secondary/10 px-3 py-1 text-sm font-medium text-muted-foreground">
+              Apply before 23rd December • 9:00 PM
+            </span>
+          )}
+        </div>
       </div>
       <div className="p-6">
         <p className="text-muted-foreground text-sm">{member.description}</p>
